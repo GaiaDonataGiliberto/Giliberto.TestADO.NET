@@ -7,12 +7,28 @@ namespace Giliberto.TestADO.NET
         static void Main(string[] args)
         {
 
-            //Console.WriteLine("Quale area ti interessa? (2-3-5-6)");
 
-            //int idArea = Int32.Parse(Console.ReadLine());
+            //ESERCIZIO 10.1
 
-            //Connected.AgentiPerArea(idArea);
+            Console.WriteLine("Quale area ti interessa? (2-3-5-6)");
 
+            int idArea = Int32.Parse(Console.ReadLine());
+
+            switch (idArea)
+            {
+                case 2:
+                case 3:
+                case 5:
+                case 6:
+                    Connected.AgentiPerArea(idArea);
+                    break;
+                default:
+                    Console.WriteLine("Area non esistente! Scegli tra 2, 3, 5 e 6.");
+                    break;
+            }
+
+
+            // ESERCIZIO 10.2
 
             Console.WriteLine("Inserisci i dati dell'agente (nome, cognome, dob, CF, anni servizio)");
 
